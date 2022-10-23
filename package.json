@@ -1,5 +1,7 @@
 {
- 
+"bin": {
+  "brain-games": "bin/brain-games.js"
+},  
   "name": "@hexlet/code",
   "type": "module",
   "version": "1.0.0",
