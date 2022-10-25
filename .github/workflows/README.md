@@ -4,4 +4,6 @@
 
 Файл hexlet-check.yml отвечает за запуск этих тестов - не удаляйте этот файл, не редактируйте его и не переименовывайте репозиторий.
 
-https://asciinema.org/a/2UJzAAEO2Si9pNP0rS0Fh9KRG
+https://asciinema.org/a/2UJzAAEO2Si9pNP0rS0Fh9KRG Игра на четность 
+
+https://asciinema.org/a/TpCEJX2UZX0cUOhgOTt51v49D Игра калькулятор
