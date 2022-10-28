@@ -30,7 +30,7 @@ export default function gameEven() {
       console.log('Correct!');
     } else {
       console.log(`${answerPlayer} is wrong answer ;(. Correct answer was ${answer}.`);
-      console.log('\'Let\'s try again');
+      console.log(`\'Let\'s try again, ${name}`);
       break;
     }
     if (i === 3) {
