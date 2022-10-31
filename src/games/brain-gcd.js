@@ -48,7 +48,7 @@ export default function runGameGCD() {
       console.log(
         `${answerPlayer} is wrong answer ;(. Correct answer was ${answer}.`
       );
-      console.log(`\'Let\'s try again, ${name}`);
+      console.log(`Let's try again, ${name}!`);
       break;
     }
     if (i === 3) {
