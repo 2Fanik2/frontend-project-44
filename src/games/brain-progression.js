@@ -1,4 +1,4 @@
-import readlineSync, { question } from 'readline-sync';
+import readlineSync from 'readline-sync';
 
 export default function runGameProgress() {
   console.log('Welcome to the Brain Games!');
@@ -22,14 +22,14 @@ export default function runGameProgress() {
     progressive[randomNumberSecret] = '..';
     // Выводим вопрос
     let question = 'Question:';
-    for (const number of progressive) {
-      question = `${question} ${number}`;
+    for (let number = 0; number < progressive.length; number += 1) {
+      question = `${question} ${progressive[number]}`;
     }
     console.log(question);
     // Запрашиваем ответ
     const answerPlayer = readlineSync.question('Your answer: ');
 
-    if (answer == answerPlayer) {
+    if (Number(answer) === Number(answerPlayer)) {
       console.log('Correct!');
     } else {
       console.log(

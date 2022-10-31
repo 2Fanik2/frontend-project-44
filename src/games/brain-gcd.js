@@ -20,28 +20,28 @@ export default function runGameGCD() {
     const firstDivisors = [];
     const twoDivisors = [];
     // Находим все делители первого числа
-    for (let i = 1; i <= firstRundomNumber; i += 1) {
-      if (firstRundomNumber % i === 0) {
-        firstDivisors.push(i);
+    for (let m = 1; m <= firstRundomNumber; m += 1) {
+      if (firstRundomNumber % m === 0) {
+        firstDivisors.push(m);
       }
     }
     // Находим все делители второго числа
-    for (let i = 1; i <= twoRundomNumber; i += 1) {
-      if (twoRundomNumber % i === 0) {
-        twoDivisors.push(i);
+    for (let count = 1; count <= twoRundomNumber; count += 1) {
+      if (twoRundomNumber % count === 0) {
+        twoDivisors.push(count);
       }
     }
     // Находим общие делители
     const divisors = _.intersection(firstDivisors, twoDivisors);
     // Находим наибольший делитель
 
-    for (let i = 0; i < divisors.length; i += 1) {
-      if (answer < divisors[i]) {
-        answer = divisors[i];
+    for (let b = 0; b < divisors.length; b += 1) {
+      if (answer < divisors[b]) {
+        answer = divisors[b];
       }
     }
     // Проверка ответов
-    if (answer == answerPlayer) {
+    if (Number(answer) === Number(answerPlayer)) {
       console.log('Correct!');
       i += 1;
     } else {

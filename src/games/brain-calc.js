@@ -19,7 +19,7 @@ export default function runGameCalc() {
 
   let i = 0;
   while (i < 3) {
-  // Рандомим оператор и записываем в константу
+    // Рандомим оператор и записываем в константу
     const randomOperator = operators[getRandomInt(3)];
     // Рандом первого числа
     const firstRandomNumber = Math.floor(Math.random() * 100) + 1;
@@ -40,14 +40,17 @@ export default function runGameCalc() {
       case '*':
         answer = firstRandomNumber * twoRandomNumber;
         break;
+      default:
     }
     // Спрашиваем ответ игрока
     const answerPlayer = readlineSync.question('Your answer: ');
     // Сравниваем ответы
-    if (answer == answerPlayer) {
+    if (Number(answer) === Number(answerPlayer)) {
       console.log('Correct!');
     } else {
-      console.log(`${answerPlayer} is wrong answer ;(. Correct answer was ${answer}.`);
+      console.log(
+        `${answerPlayer} is wrong answer ;(. Correct answer was ${answer}.`,
+      );
       console.log(`Let's try again, ${name}!`);
       break;
     }
