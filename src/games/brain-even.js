@@ -14,7 +14,7 @@ export default function runGameEven() {
   while (i < 3) {
     const rundomNumber = Math.floor(Math.random() * 100) + 1;
 
-    console.log('Question: ', rundomNumber);
+    console.log(`Question: ${rundomNumber}`);
 
     const answerPlayer = readlineSync.question('Your answer: ');
     let answer = '';
