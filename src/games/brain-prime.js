@@ -9,7 +9,7 @@ export default function runGamePrime() {
 
   for (let i = 0; i < 3; i += 1) {
     const rundomNumber = Math.floor(Math.random() * 100) + 1;
-    console.log('Question: ', rundomNumber);
+    console.log(`Question: ${rundomNumber}`);
     // Спрашиваем ответ
     const answerPlayer = readlineSync.question('Your answer: ');
     // Проверяем число на правильность
