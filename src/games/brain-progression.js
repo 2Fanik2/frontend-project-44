@@ -21,7 +21,7 @@ export default function runGameProgress() {
     const answer = progressive[randomNumberSecret];
     progressive[randomNumberSecret] = '..';
     // Выводим вопрос
-    let question = 'Question: ';
+    let question = 'Question:';
     for (const number of progressive) {
       question = `${question} ${number}`;
     }
