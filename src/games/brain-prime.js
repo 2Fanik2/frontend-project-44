@@ -27,7 +27,7 @@ export default function runGamePrime() {
       count += 1;
     }
     // Проверка ответов
-    if (Number(answer) === Number(answerPlayer)) {
+    if (answer === (answerPlayer) {
       console.log('Correct!');
     } else {
       console.log(
