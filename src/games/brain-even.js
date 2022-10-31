@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export default function gameEven() {
+export default function runGameEven() {
   console.log('Welcome to the Brain Games!');
   let name = '';
   const helloPlayer = () => {

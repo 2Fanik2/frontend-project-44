@@ -1,6 +1,6 @@
 import readlineSync, { question } from 'readline-sync';
 
-export default function gameProgress() {
+export default function runGameProgress() {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${name}`);

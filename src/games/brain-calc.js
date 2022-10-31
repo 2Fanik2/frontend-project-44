@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-export default function gameCalc() {
+export default function runGameCalc() {
   console.log('Welcome to the Brain Games!');
   let name = '';
   const helloPlayer = () => {

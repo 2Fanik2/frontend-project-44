@@ -1,20 +1,20 @@
-import readlineSync from 'readline-sync';
-import _ from 'lodash';
+import readlineSync from "readline-sync";
+import _ from "lodash";
 
-export default function gameGCD() {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name?: ');
+export default function runGameGCD() {
+  console.log("Welcome to the Brain Games!");
+  const name = readlineSync.question("May I have your name?: ");
   console.log(`Hello, ${name}`);
 
-  console.log('Find the greatest common divisor of given numbers.');
+  console.log("Find the greatest common divisor of given numbers.");
   let i = 0;
   while (i < 3) {
     const firstRundomNumber = Math.floor(Math.random() * 100) + 1;
     const twoRundomNumber = Math.floor(Math.random() * 100) + 1;
 
     console.log(`Question: ${firstRundomNumber} ${twoRundomNumber}`);
-
-    const answerPlayer = readlineSync.question('Your answer: ');
+    //Спрашиваем ответ
+    const answerPlayer = readlineSync.question("Your answer: ");
     let answer = 1;
     // Вычисляем наибольший делитель
     const firstDivisors = [];
@@ -42,11 +42,11 @@ export default function gameGCD() {
     }
     // Проверка ответов
     if (answer == answerPlayer) {
-      console.log('Correct!');
+      console.log("Correct!");
       i += 1;
     } else {
       console.log(
-        `${answerPlayer} is wrong answer ;(. Correct answer was ${answer}.`,
+        `${answerPlayer} is wrong answer ;(. Correct answer was ${answer}.`
       );
       console.log(`\'Let\'s try again, ${name}`);
       break;
