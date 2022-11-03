@@ -1,34 +1,21 @@
-import readlineSync from 'readline-sync';
+import runGame from '../index.js';
 
 export default function runGameCalc() {
-  console.log('Welcome to the Brain Games!');
-  let name = '';
-  const helloPlayer = () => {
-    name = readlineSync.question('May I have your name?: ');
-    console.log(`Hello, ${name}`);
-  };
-  helloPlayer();
-  // Заголовок начала игры
-  console.log('What is the result of the expression?');
-  // Функция рандома от 0 до 2
-  function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-  }
-  // Массив операторов
-  const operators = ['+', '-', '*'];
-
-  let i = 0;
-  while (i < 3) {
-    // Рандомим оператор и записываем в константу
+  const roundGenerate = () => {
+    const result = [];
+    // Функция рандома от 0 до 2
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+    }
+    // Массив операторов
+    const operators = ['+', '-', '*'];
     const randomOperator = operators[getRandomInt(3)];
-    // Рандом первого числа
+    // Рандом первого
     const firstRandomNumber = Math.floor(Math.random() * 100) + 1;
     // Рандом второго число
     const twoRandomNumber = Math.floor(Math.random() * 100) + 1;
-    console.log(
-      `Question: ${firstRandomNumber} ${randomOperator} ${twoRandomNumber}`,
-    );
-    // Находим правильный ответ
+
+    const question = `${firstRandomNumber} ${randomOperator} ${twoRandomNumber}`;
     let answer = 0;
     switch (randomOperator) {
       case '+':
@@ -42,21 +29,10 @@ export default function runGameCalc() {
         break;
       default:
     }
-    // Спрашиваем ответ игрока
-    const answerPlayer = readlineSync.question('Your answer: ');
-    // Сравниваем ответы
-    if (Number(answer) === Number(answerPlayer)) {
-      console.log('Correct!');
-    } else {
-      console.log(
-        `${answerPlayer} is wrong answer ;(. Correct answer was ${answer}.`,
-      );
-      console.log(`Let's try again, ${name}!`);
-      break;
-    }
-    i += 1;
-    if (i === 3) {
-      console.log(`Congratulations, ${name}!`);
-    }
-  }
+    result.push(question, String(answer));
+    return result;
+  };
+
+  const description = 'What is the result of the expression?';
+  runGame(description, roundGenerate);
 }
