@@ -2,32 +2,43 @@
 [![Actions Status](https://github.com/2Fanik2/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/2Fanik2/frontend-project-44/actions)
 <a href="https://codeclimate.com/github/2Fanik2/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/1374c79e3991e5019106/maintainability" /></a>
 
-https://asciinema.org/a/2UJzAAEO2Si9pNP0rS0Fh9KRG Игра Чётное ли число? 
 
-https://asciinema.org/a/TpCEJX2UZX0cUOhgOTt51v49D Игра Калькулятор
+<p>Game even</p>
+<script src="https://asciinema.org/a/2UJzAAEO2Si9pNP0rS0Fh9KRG" id="asciicast-14" async></script>
 
-https://asciinema.org/a/FOqWEGo6spcpb9GwzfiGNaExG Игра Прогрессия
-
-https://asciinema.org/a/ePaSzvOwWLVwNv2ylsJ9SWgsw Игра Простое ли число?
-
-Добро пожаловать в проект "Игры разума!"
-Проект состоит из 4 игр:
-1)"Чётное ли число?" - в этой игре вам нужно указать является ли число чётным или же нет
-2)"Калькулятор" - в этой игре вам нужно решить простое выражение из двух чисел 
-3)"Прогрессия"- в этой игре вам нужно вычислить пропущенное число прогрессии
-4)"Простое ли число?"- в этой игре вам нужно указать является ли число простым или же нет
-5)"Наибольший общий делитель" - в этой игре вам дается 2 числа,вы должны вычислить наибольший общий знаменатель 
-
-Каждая игра состоит из трёх вопросов,вам нужно ответить на все вопросы верно.
+<p>Game calc</p>
+<script src="https://asciinema.org/a/TpCEJX2UZX0cUOhgOTt51v49D" id="asciicast-14" async></script>
 
 
-Устанавливать игру нужно следуюшим способом, 
-1)git clone https://github.com/2Fanik2/frontend-project-44.git
-2)make install 
+<p>Game progressive</p>
+<script src="https://asciinema.org/a/FOqWEGo6spcpb9GwzfiGNaExG" id="asciicast-14" async></script>
 
-ЗАПУСК ИГР:
-1)"Чётное ли число?" - brain-even 
-2)"Калькулятор" -  brain-calc
-3)"Прогрессия"- brain-progression
-4)"Простое ли число?"- brain-prime
-5)"Наибольший общий делитель" - brain-gcd
+
+<p>Game prime</p>
+<script src="https://asciinema.org/a/ePaSzvOwWLVwNv2ylsJ9SWgsw" id="asciicast-14" async></script>
+
+
+
+Welcome to the Mind Games Project!
+The project consists of four games:
+1) "Is it an even number?" - In this game you need to specify whether the number is even or not.
+2) "Calculator" - in this game you have to solve a simple expression of two numbers 
+3) "Progression"- in this game you have to calculate the missing number of the progression
+4) "Is it a prime number?" - in this game you need to specify whether the number is prime or not
+5) "The greatest common divisor" - in this game you are given two numbers, you must calculate the greatest common denominator 
+
+Each game has three questions, you need to answer all the questions correctly.
+
+
+Install the game as follows, 
+1) git clone https://github.com/2Fanik2/frontend-project-44.git
+2) make install 
+
+STARTING THE GAME:
+1) "Is it an even number? - brain-even 
+2) "Calculator" - brain-calc
+3) "Progression"- brain-progression
+4) "Is it a prime number?" - brain-prime
+5) "The greatest common divisor" - brain-gcd
+
+Translated with www.DeepL.com/Translator (free version)
