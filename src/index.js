@@ -11,7 +11,7 @@ export default function runGame(description, roundGenerate) {
   while (i < rounds) {
     const questAndAnswer = roundGenerate();
 
-    console.log(`${questAndAnswer[0]}`);
+    console.log(`Question: ${questAndAnswer[0]}`);
     const answerPlayer = readlineSync.question('Your answer: ');
     if (answerPlayer === questAndAnswer[1]) {
       console.log('Correct!');
