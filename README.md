@@ -3,19 +3,17 @@
 <a href="https://codeclimate.com/github/2Fanik2/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/1374c79e3991e5019106/maintainability" /></a>
 
 
-<p>Game even</p>
-<script src="https://asciinema.org/a/2UJzAAEO2Si9pNP0rS0Fh9KRG" id="asciicast-14" async></script>
-
-<p>Game calc</p>
-<script src="https://asciinema.org/a/TpCEJX2UZX0cUOhgOTt51v49D" id="asciicast-14" async></script>
 
 
-<p>Game progressive</p>
-<script src="https://asciinema.org/a/FOqWEGo6spcpb9GwzfiGNaExG" id="asciicast-14" async></script>
+[![asciicast](https://asciinema.org/a/2UJzAAEO2Si9pNP0rS0Fh9KRG.png)](https://asciinema.org/a/2UJzAAEO2Si9pNP0rS0Fh9KRG)
+
+[![asciicast](https://asciinema.org/a/TpCEJX2UZX0cUOhgOTt51v49D.png)](https://asciinema.org/a/TpCEJX2UZX0cUOhgOTt51v49D)
+
+[![asciicast](https://asciinema.org/a/FOqWEGo6spcpb9GwzfiGNaExG.png)](https://asciinema.org/a/FOqWEGo6spcpb9GwzfiGNaExG)
+
+[![asciicast](https://asciinema.org/a/ePaSzvOwWLVwNv2ylsJ9SWgsw.png)](https://asciinema.org/a/ePaSzvOwWLVwNv2ylsJ9SWgsw)
 
 
-<p>Game prime</p>
-<script src="https://asciinema.org/a/ePaSzvOwWLVwNv2ylsJ9SWgsw" id="asciicast-14" async></script>
 
 
 

@@ -1,11 +1,12 @@
 import _ from 'lodash';
 import runGame from '../index.js';
+import randomInteger from '../utils.js';
 
 export default function runGameGCD() {
   const roundGenerate = () => {
     const result = [];
-    const firstRundomNumber = Math.floor(Math.random() * 100) + 1;
-    const twoRundomNumber = Math.floor(Math.random() * 100) + 1;
+    const firstRundomNumber = randomInteger(0, 100);
+    const twoRundomNumber = randomInteger(0, 100);
     const questionsNumbers = `${firstRundomNumber} ${twoRundomNumber}`;
 
     let answer = 1;

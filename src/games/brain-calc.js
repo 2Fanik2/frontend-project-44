@@ -1,38 +1,53 @@
 import runGame from '../index.js';
+import randomInteger from '../utils.js';
+
+const operators = ['+', '-', '*'];
+const description = 'What is the result of the expression?';
+
+function expressionСalculation(
+  firstRandomNumber,
+  randomOperator,
+  twoRandomNumber,
+) {
+  let answer = 0;
+  switch (randomOperator) {
+    case '+':
+      answer = firstRandomNumber + twoRandomNumber;
+      break;
+    case '-':
+      answer = firstRandomNumber - twoRandomNumber;
+      break;
+    case '*':
+      answer = firstRandomNumber * twoRandomNumber;
+      break;
+    default:
+  }
+  return answer;
+}
 
 export default function runGameCalc() {
   const roundGenerate = () => {
     const result = [];
-    // Функция рандома от 0 до 2
-    function getRandomInt(max) {
-      return Math.floor(Math.random() * max);
-    }
-    // Массив операторов
-    const operators = ['+', '-', '*'];
-    const randomOperator = operators[getRandomInt(3)];
+
+    // Рандом оператора
+    const randomOperator = operators[randomInteger(0, 2)];
     // Рандом первого
-    const firstRandomNumber = Math.floor(Math.random() * 100) + 1;
+    const firstRandomNumber = randomInteger(0, 100);
     // Рандом второго число
-    const twoRandomNumber = Math.floor(Math.random() * 100) + 1;
+    const twoRandomNumber = randomInteger(0, 100);
 
     const question = `${firstRandomNumber} ${randomOperator} ${twoRandomNumber}`;
-    let answer = 0;
-    switch (randomOperator) {
-      case '+':
-        answer = firstRandomNumber + twoRandomNumber;
-        break;
-      case '-':
-        answer = firstRandomNumber - twoRandomNumber;
-        break;
-      case '*':
-        answer = firstRandomNumber * twoRandomNumber;
-        break;
-      default:
-    }
-    result.push(question, String(answer));
+    result.push(
+      question,
+      String(
+        expressionСalculation(
+          firstRandomNumber,
+          randomOperator,
+          twoRandomNumber,
+        ),
+      ),
+    );
     return result;
   };
-
-  const description = 'What is the result of the expression?';
   runGame(description, roundGenerate);
 }

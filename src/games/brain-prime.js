@@ -1,9 +1,10 @@
 import runGame from '../index.js';
+import randomInteger from '../utils.js';
 
 export default function runGamePrime() {
   const roundGenerate = () => {
     const result = [];
-    const rundomNumber = Math.floor(Math.random() * 100) + 1;
+    const rundomNumber = randomInteger(0, 100);
     let answer = 'yes';
     let divisors = 0;
     let count = 1;
