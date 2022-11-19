@@ -1,53 +1,54 @@
 import runGame from '../index.js';
-import randomInteger from '../utils.js';
+import generateRandomInRange from '../utils.js';
 
 const operators = ['+', '-', '*'];
 const description = 'What is the result of the expression?';
 
-function expressionСalculation(
-  firstRandomNumber,
-  randomOperator,
-  twoRandomNumber,
+const roundGenerate = () => {
+  const result = [];
+
+ 
+  const randomOperator = operators[generateRandomInRange(0, operators.length - 1)];
+  
+  const firstRandomNumber = generateRandomInRange(0, 100);
+  
+  const twoRandomNumber = generateRandomInRange(0, 100);
+
+  const question = `${firstRandomNumber} ${randomOperator} ${twoRandomNumber}`;
+  const answer = String(
+    Сalculation(
+      firstRandomNumber,
+      randomOperator,
+      twoRandomNumber,
+    ));
+
+  result.push(question,answer);
+
+  return result;
+};
+
+function Сalculation(
+  num1,
+  num2,
+  operator
 ) {
-  let answer = 0;
-  switch (randomOperator) {
+  
+  switch (operator) {
     case '+':
-      answer = firstRandomNumber + twoRandomNumber;
-      break;
+      return num1 + num2;
+      
     case '-':
-      answer = firstRandomNumber - twoRandomNumber;
-      break;
+      return num1 - num2;
+      
     case '*':
-      answer = firstRandomNumber * twoRandomNumber;
-      break;
+      return num1 * num2;
+      
     default:
   }
-  return answer;
+  return
 }
 
 export default function runGameCalc() {
-  const roundGenerate = () => {
-    const result = [];
-
-    // Рандом оператора
-    const randomOperator = operators[randomInteger(0, 2)];
-    // Рандом первого
-    const firstRandomNumber = randomInteger(0, 100);
-    // Рандом второго число
-    const twoRandomNumber = randomInteger(0, 100);
-
-    const question = `${firstRandomNumber} ${randomOperator} ${twoRandomNumber}`;
-    result.push(
-      question,
-      String(
-        expressionСalculation(
-          firstRandomNumber,
-          randomOperator,
-          twoRandomNumber,
-        ),
-      ),
-    );
-    return result;
-  };
+  
   runGame(description, roundGenerate);
 }
