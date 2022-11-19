@@ -7,7 +7,8 @@ const roundGenerate = () => {
   const twoRundomNumber = generateRandomInRange(0, 100);
   const question = `${firstRundomNumber} ${twoRundomNumber}`;
 
-  let answer = String(1);
+  let integerAnswer = 1;
+  const answer = String(integerAnswer);
 
   const firstDivisors = [];
   const twoDivisors = [];
@@ -27,8 +28,8 @@ const roundGenerate = () => {
   const divisors = _.intersection(firstDivisors, twoDivisors);
 
   for (let b = 0; b < divisors.length; b += 1) {
-    if (answer < divisors[b]) {
-      answer = divisors[b];
+    if (integerAnswer < divisors[b]) {
+      integerAnswer = divisors[b];
     }
   }
 
