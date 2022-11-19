@@ -3,7 +3,6 @@ import generateRandomInRange from '../utils.js';
 
 export default function runGameEven() {
   const roundGenerate = () => {
-    
     const rundomNumber = generateRandomInRange(0, 100);
     let answer = '';
     if (rundomNumber % 2 === 0) {
@@ -11,7 +10,6 @@ export default function runGameEven() {
     } else {
       answer = 'no';
     }
-    
 
     return [rundomNumber, answer];
   };

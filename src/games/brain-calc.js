@@ -4,51 +4,44 @@ import generateRandomInRange from '../utils.js';
 const operators = ['+', '-', '*'];
 const description = 'What is the result of the expression?';
 
-const roundGenerate = () => {
-  const result = [];
-
- 
-  const randomOperator = operators[generateRandomInRange(0, operators.length - 1)];
-  
-  const firstRandomNumber = generateRandomInRange(0, 100);
-  
-  const twoRandomNumber = generateRandomInRange(0, 100);
-
-  const question = `${firstRandomNumber} ${randomOperator} ${twoRandomNumber}`;
-  const answer = String(
-    Сalculation(
-      firstRandomNumber,
-      randomOperator,
-      twoRandomNumber,
-    ));
-
-  result.push(question,answer);
-
-  return result;
-};
-
-function Сalculation(
-  num1,
-  num2,
-  operator
-) {
-  
+function calculate(num1, operator, num2) {
+  let answer1 = 0;
   switch (operator) {
     case '+':
-      return num1 + num2;
-      
+      answer1 = num1 + num2;
+      break;
+
     case '-':
-      return num1 - num2;
-      
+      answer1 = num1 - num2;
+      break;
+
     case '*':
-      return num1 * num2;
-      
+      answer1 = num1 * num2;
+      break;
     default:
   }
-  return
+  return answer1;
 }
 
+const roundGenerate = () => {
+  const operator = operators[generateRandomInRange(0, operators.length - 1)];
+
+  const num1 = generateRandomInRange(0, 100);
+
+  const num2 = generateRandomInRange(0, 100);
+
+  const question = `${num1} ${operator} ${num2}`;
+  const answer2 = String(
+    calculate(
+      num1,
+      operator,
+      num2,
+    ),
+  );
+
+  return [question, answer2];
+};
+
 export default function runGameCalc() {
-  
   runGame(description, roundGenerate);
 }
