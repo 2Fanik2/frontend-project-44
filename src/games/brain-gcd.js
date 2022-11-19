@@ -8,7 +8,6 @@ const roundGenerate = () => {
   const question = `${firstRundomNumber} ${twoRundomNumber}`;
 
   let integerAnswer = 1;
-  const answer = String(integerAnswer);
 
   const firstDivisors = [];
   const twoDivisors = [];
@@ -32,7 +31,7 @@ const roundGenerate = () => {
       integerAnswer = divisors[b];
     }
   }
-
+  const answer = String(integerAnswer);
   return [question, answer];
 };
 
