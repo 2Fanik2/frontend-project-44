@@ -16,7 +16,6 @@ const generateRound = () => {
     }
     count += 1;
   }
-
   return [num, answer];
 };
 
