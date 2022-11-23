@@ -1,37 +1,27 @@
 import runGame from '../index.js';
-import generateRandomInRange from '../utils.js';
+import getRandomInRange from '../utils.js';
 
 const operators = ['+', '-', '*'];
 const description = 'What is the result of the expression?';
 
 function calculate(num1, operator, num2) {
-  let answer1 = 0;
   switch (operator) {
-    case '+':
-      answer1 = num1 + num2;
-      break;
-
-    case '-':
-      answer1 = num1 - num2;
-      break;
-
-    case '*':
-      answer1 = num1 * num2;
-      break;
-    default:
+    case '+': return num1 + num2;
+    case '*': return num1 * num2;
+    case '-': return num1 - num2;
+    default: throw new Error(`Operator ${operator} - is unknown `);
   }
-  return answer1;
 }
 
-const roundGenerate = () => {
-  const operator = operators[generateRandomInRange(0, operators.length - 1)];
+const generateRound = () => {
+  const operator = operators[getRandomInRange(0, operators.length - 1)];
 
-  const num1 = generateRandomInRange(0, 100);
+  const num1 = getRandomInRange(0, 100);
 
-  const num2 = generateRandomInRange(0, 100);
+  const num2 = getRandomInRange(0, 100);
 
   const question = `${num1} ${operator} ${num2}`;
-  const answer2 = String(
+  const answer = String(
     calculate(
       num1,
       operator,
@@ -39,9 +29,9 @@ const roundGenerate = () => {
     ),
   );
 
-  return [question, answer2];
+  return [question, answer];
 };
 
 export default function runGameCalc() {
-  runGame(description, roundGenerate);
+  runGame(description, generateRound);
 }

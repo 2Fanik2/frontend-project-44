@@ -1,8 +1,8 @@
 import runGame from '../index.js';
-import generateRandomInRange from '../utils.js';
+import getRandomInRange from '../utils.js';
 
-const roundGenerate = () => {
-  const num = generateRandomInRange(0, 100);
+const generateRound = () => {
+  const num = getRandomInRange(0, 100);
   let answer = 'yes';
   let divisors = 0;
   let count = 1;
@@ -22,5 +22,5 @@ const roundGenerate = () => {
 
 export default function runGamePrime() {
   const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  runGame(description, roundGenerate);
+  runGame(description, generateRound);
 }

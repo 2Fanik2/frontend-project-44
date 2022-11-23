@@ -1,10 +1,10 @@
 import _ from 'lodash';
 import runGame from '../index.js';
-import generateRandomInRange from '../utils.js';
+import getRandomInRange from '../utils.js';
 
 const roundGenerate = () => {
-  const firstRundomNumber = generateRandomInRange(0, 100);
-  const twoRundomNumber = generateRandomInRange(0, 100);
+  const firstRundomNumber = getRandomInRange(0, 100);
+  const twoRundomNumber = getRandomInRange(0, 100);
   const question = `${firstRundomNumber} ${twoRundomNumber}`;
 
   let integerAnswer = 1;

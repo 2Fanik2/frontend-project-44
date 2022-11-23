@@ -1,6 +1,5 @@
-function randomInteger(min, max) {
-// случайное число от min до (max+1)
+function getRandomInRange(min, max) {
   const rand = min + Math.random() * (max + 1 - min);
   return Math.floor(rand);
 }
-export default randomInteger;
+export default getRandomInRange;
