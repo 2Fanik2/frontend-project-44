@@ -26,7 +26,7 @@ const generateRound = () => {
 
   let question = '';
   for (let number = 0; number < progressive.length; number += 1) {
-    question = `${question}${progressive[number] }`;
+    question = `${question} ${progressive[number]}`;
   }
 
   return [question, answer];
