@@ -12,7 +12,7 @@ export default function runGame(description, generateRound) {
   for (let i = 0; i < roundsCount; i += 1) {
     const [question, answer] = generateRound();
 
-    console.log(`Question:${question}`);
+    console.log(`Question: ${question}`);
     const answerPlayer = readlineSync.question('Your answer: ');
     if (answerPlayer === answer) {
       console.log('Correct!');
