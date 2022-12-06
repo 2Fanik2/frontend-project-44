@@ -1,18 +1,21 @@
+import { question } from 'readline-sync';
 import runGame from '../index.js';
-import generateRandomInRange from '../utils.js';
+import getRandomInRange from '../utils.js';
+
+const isEven = (num) => {
+  return num % 2 === 0;
+}
+
+const generateRound = () => {
+    
+  const num = getRandomInRange(0,100);
+  const question = num; 
+  const answer = isEven(num) ? 'yes': 'no';
+  return [question, answer];
+};
 
 export default function runGameEven() {
-  const roundGenerate = () => {
-    const rundomNumber = generateRandomInRange(0, 100);
-    let answer = '';
-    if (rundomNumber % 2 === 0) {
-      answer = 'yes';
-    } else {
-      answer = 'no';
-    }
-
-    return [rundomNumber, answer];
-  };
+  
   const description = 'Answer "yes" if the number is even, otherwise answer "no".';
-  runGame(description, roundGenerate);
+  runGame(description, generateRound);
 }

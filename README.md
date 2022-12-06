@@ -40,5 +40,3 @@ STARTING THE GAME:
 3) "Progression"- brain-progression
 4) "Is it a prime number?" - brain-prime
 5) "The greatest common divisor" - brain-gcd
-
-Translated with www.DeepL.com/Translator (free version)
