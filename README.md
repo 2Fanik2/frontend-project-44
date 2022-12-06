@@ -3,7 +3,9 @@
 <a href="https://codeclimate.com/github/2Fanik2/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/1374c79e3991e5019106/maintainability" /></a>
 
 Welcome to the Mind Games Project!
+=============================================================
 The project consists of four games:
+-------------------------------------------------------------
 1) "Is it an even number?" - In this game you need to specify whether the number is even or not.
 2) "Calculator" - in this game you have to solve a simple expression of two numbers 
 3) "Progression"- in this game you have to calculate the missing number of the progression
@@ -18,6 +20,7 @@ Install the game as follows,
 2) make install 
 
 STARTING THE GAME:
+---------------------------------------------------------------
 1) "Is it an even number? - brain-even 
 2) "Calculator" - brain-calc
 3) "Progression"- brain-progression
