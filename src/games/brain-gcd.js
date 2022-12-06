@@ -2,29 +2,25 @@ import _ from 'lodash';
 import runGame from '../index.js';
 import getRandomInRange from '../utils.js';
 
-const roundGenerate = () => {
-  const firstRundomNumber = getRandomInRange(0, 100);
-  const twoRundomNumber = getRandomInRange(0, 100);
-  const question = `${firstRundomNumber} ${twoRundomNumber}`;
+const description = 'Find the greatest common divisor of given numbers.';
+
+function calculateGreatestDivisors(num) {
+  const divisors = [];
+  for (let m = 1; m <= num; m += 1) {
+    if (num % m === 0) {
+      divisors.push(m);
+    }
+  }
+  return divisors;
+}
+
+const generateRound = () => {
+  const num1 = getRandomInRange(0, 100);
+  const num2 = getRandomInRange(0, 100);
+  const question = `${num1} ${num2}`;
 
   let integerAnswer = 1;
-
-  const firstDivisors = [];
-  const twoDivisors = [];
-
-  for (let m = 1; m <= firstRundomNumber; m += 1) {
-    if (firstRundomNumber % m === 0) {
-      firstDivisors.push(m);
-    }
-  }
-
-  for (let count = 1; count <= twoRundomNumber; count += 1) {
-    if (twoRundomNumber % count === 0) {
-      twoDivisors.push(count);
-    }
-  }
-
-  const divisors = _.intersection(firstDivisors, twoDivisors);
+  const divisors = _.intersection(calculateGreatestDivisors(num1), calculateGreatestDivisors(num2));
 
   for (let b = 0; b < divisors.length; b += 1) {
     if (integerAnswer < divisors[b]) {
@@ -36,6 +32,5 @@ const roundGenerate = () => {
 };
 
 export default function runGameGCD() {
-  const description = 'Find the greatest common divisor of given numbers.';
-  runGame(description, roundGenerate);
+  runGame(description, generateRound);
 }

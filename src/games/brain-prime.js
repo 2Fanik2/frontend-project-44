@@ -1,6 +1,8 @@
 import runGame from '../index.js';
 import getRandomInRange from '../utils.js';
 
+const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 function isPrime(num) {
   let divisors = 0;
   let count = 1;
@@ -25,6 +27,5 @@ const generateRound = () => {
 };
 
 export default function runGamePrime() {
-  const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   runGame(description, generateRound);
 }

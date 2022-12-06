@@ -1,11 +1,17 @@
 import runGame from '../index.js';
 import getRandomInRange from '../utils.js';
 
-function buildingOfProgressive(intervalOfProgression) {
-  let itemOfProgression = intervalOfProgression;
-  const result = [intervalOfProgression];
+const description = 'What number is missing in the progression?';
 
-  for (let i = 1; i < 10; i += 1) {
+function buildingOfProgressive(
+  intervalOfProgression,
+  firstItemOfProgression,
+  lengthOfProgression,
+) {
+  const result = [firstItemOfProgression];
+  let itemOfProgression = firstItemOfProgression;
+
+  for (let i = 1; i < lengthOfProgression; i += 1) {
     itemOfProgression += intervalOfProgression;
     result.push(itemOfProgression);
   }
@@ -15,12 +21,19 @@ function buildingOfProgressive(intervalOfProgression) {
 
 const generateRound = () => {
   const intervalOfProgression = getRandomInRange(1, 10);
+  console.log(intervalOfProgression);
+  const firstItemOfProgression = getRandomInRange(0, 10);
+  console.log(firstItemOfProgression);
+  const lengthOfProgression = getRandomInRange(5, 10);
+  console.log(lengthOfProgression);
 
   const progressive = buildingOfProgressive(
     intervalOfProgression,
+    firstItemOfProgression,
+    lengthOfProgression,
   );
 
-  const randomNumberSecret = getRandomInRange(0, 9);
+  const randomNumberSecret = getRandomInRange(0, lengthOfProgression - 1);
   const answer = String(progressive[randomNumberSecret]);
   progressive[randomNumberSecret] = '..';
 
@@ -33,6 +46,5 @@ const generateRound = () => {
 };
 
 export default function runGameProgress() {
-  const description = 'What number is missing in the progression?';
   runGame(description, generateRound);
 }
